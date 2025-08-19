@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="jakarta.faces.html">
+<h:head>
+    <title>Add Book</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:outputLabel for="title" value="Title:"/>
+        <h:inputText id="title" value="#{bookBean.book.title}" /><br/>
+
+        <h:outputLabel for="author" value="Author:"/>
+        <h:inputText id="author" value="#{bookBean.book.author}" /><br/>
+
+        <h:outputLabel for="price" value="Price:"/>
+        <h:inputText id="price" value="#{bookBean.book.price}" /><br/>
+
+        <h:commandButton value="Save" action="#{bookBean.addBook}" />
+    </h:form>
+</h:body>
+</html>
